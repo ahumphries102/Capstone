@@ -2,11 +2,11 @@ import React from 'react'
 
 const magicList = (props)=>{
 	const namesList = props.magicCards.map((magicCards, i)=>{
-		return <li key={i}>{magicCards.name}<button class="ui button active">Button crap</button></li>
+		return <li key={i}>{magicCards.name}<button className="ui button active">Button crap</button></li>
 	})
 
-	const manaCostList = props.magicCards.map((magicCards, i)=>{
-		return <li key={i}>{magicCards.cmc}</li>
+	const cardImages = props.magicCards.map((magicCards, i)=>{
+		return <li key={i}><img src={magicCards.image_uris.small} alt='magic cards' className='enlarge'/></li>
 	})
 
 	const colorsList = props.magicCards.map((magicCards, i)=>{
@@ -15,8 +15,8 @@ const magicList = (props)=>{
 	return(
 		<div>
 			<ul>
+				{cardImages}
 				{namesList}
-				{manaCostList}
 				{colorsList}
 			</ul>
 		</div>
