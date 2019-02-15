@@ -10,9 +10,8 @@ export default class MainContainer extends Component {
       try{
         const magicApi = await fetch('https://api.scryfall.com/cards/search?order=set&q=e%3Arna&unique=prints')
         const magicData = await magicApi.json()
-
+        
         this.setState( { magicCards:magicData.data } )
-        console.log("HERE DAT API", magicData)
       }
       catch(err){
         console.log(err, 'catch caught an error')
@@ -31,7 +30,7 @@ export default class MainContainer extends Component {
     return (
       <div className="App">
         <h1>Ravnica Allegience</h1>
-        <MagicCards magicCards={this.state.magicCards}/>
+          <MagicCards magicCards={this.state.magicCards}/>
       </div>
     );
   }
