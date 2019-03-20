@@ -1,3 +1,4 @@
+//MainContainer essentially is our main display
 import React, { Component } from 'react'
 //import ReactDOM from 'react-dom'
 import FetchDisplay from './FetchDisplay'
@@ -19,6 +20,7 @@ export default class MainContainer extends Component{
 					</section>
 				</section>
 			</div>
+			
 			<FetchDisplay />
 			</section>
 			)

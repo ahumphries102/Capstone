@@ -39,6 +39,26 @@ body{
   justify-content: center;
 }
 /**** Styles for everything in the intro section *********/
+button:focus{
+  outline:0;
+}
+
+.introButtons{
+  border:none;
+  font-family: inherit;
+  width:5%;
+  margin: 0 1% 0 0;
+  background: transparent;
+  transition: .3s ease-in-out;
+}
+
+.introButtons img{
+  width: 100%;
+  height: auto;
+}
+.introButtons:hover{
+  transform: scale(1.1, 1.1);
+}
 .introChildren{
   background-color:rgb(250,250,250);
   width: 75%;

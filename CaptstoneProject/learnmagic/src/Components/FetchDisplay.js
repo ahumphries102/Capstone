@@ -7,12 +7,16 @@ export default class FetchDisplay extends Component{
         pyResp: []
 	}
 	componentDidMount(){
+		//Call our fetches when localhost:3000 is connected
 		this.fetchServer().then((data) => console.log(data, "server fetched"))
         this.fetchMagicCards().then((data) => console.log(data, "did mount"))
 	}
+	//Connect to our server which is fetched and returned once all the synchronous
+	//code has compiled
 	fetchServer = async ()=>{
 		try{
-
+		//Fetch the server when we connect, set the method of the response to GET
+		// use CORS for handling cross origin resource sharing
 		 fetch('http://localhost:5000/', {
       		method: 'GET',
       		mode: 'cors',
@@ -21,6 +25,7 @@ export default class FetchDisplay extends Component{
 		        'Content-Type': 'application/json'
      		}
    		})
+		 //
 	      .then(result=>result.json())
 	      .then(item=>console.log(item))
 	      .catch(err =>{

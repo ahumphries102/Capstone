@@ -7,12 +7,13 @@ export default class Contact extends Component{
 		email: ''
 	}
 	handleOnSubmit = (event)=>{
-		let userEmail = {
-			thoughts: this.state.thoughts,
-			name: this.state.name,
-			email: this .state.email
-		}
         event.preventDefault()
+        // eslint-disable-next-line
+		let userEmail = {
+			thoughts:this.state.thoughts,
+			name:this.state.name,
+			email:this.state.email
+		}
 	}
 	handleOnChange = (event)=>{
 		this.setState({
@@ -24,7 +25,7 @@ export default class Contact extends Component{
 	}
 	render(){
 		return(
-			<form onSubmit={this.handleOnSubmit, this.props.email} action='http://localhost:5000/' method="POST" className="form">
+			<form onSubmit={this.handleOnSubmit} action='http://localhost:5000/' method="POST" className="form">
 			<h3>Contact me</h3>
 			<p>If you like what you've learned please feel free to reach out to me</p>
 			<textarea onChange = {this.handleOnChange} placeholder="What are you thoughts?" className="thoughts" name="thoughts" rows="10" cols="33"></textarea>
@@ -40,7 +41,7 @@ export default class Contact extends Component{
 			  </div>
 
 			  <div className="form-example">
-			    <input type="submit" value="Subscribe!"/>
+			    <input type="submit" value="Subscribe!" onClick={this.props.email}/>
 			  </div>
 			</form>
 		)
