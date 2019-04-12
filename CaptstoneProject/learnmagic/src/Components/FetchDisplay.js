@@ -18,7 +18,7 @@ export default class FetchDisplay extends Component{
 		//Fetch the server when we connect, set the method of the response to GET
 		// use CORS for handling cross origin resource sharing
 		 fetch('http://localhost:5000/', {
-      		method: 'GET',
+      		method: 'POST',
       		mode: 'cors',
       		headers: {
 		        'Accept': 'application/json',

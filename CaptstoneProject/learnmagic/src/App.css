@@ -5,6 +5,9 @@ will not work ***/
   margin: 0;
   padding:0;
 }
+html{
+  scroll-behavior: smooth;
+}
 a{
   color: black;
   text-decoration: none;
@@ -42,7 +45,24 @@ body{
 button:focus{
   outline:0;
 }
-
+.howToPlay{
+  height:100vh;
+}
+.introduction{
+  height:100vh;
+}
+.introductionImg{
+  display: flex;
+  width: 100%;
+  height:auto;
+}
+.introductionImg > img{
+  height:auto;
+  width: auto;
+}
+.introductionImg p{
+  padding-left:2%;
+}
 .introButtons{
   border:none;
   font-family: inherit;
@@ -120,6 +140,8 @@ button:focus{
   position: relative;
   background-image: url("https://images.alphacoders.com/261/261841.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100vw;
   z-index: 997;
   top: 0;

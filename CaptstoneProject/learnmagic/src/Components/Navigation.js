@@ -44,7 +44,7 @@ class TemporaryDrawer extends Component {
     const sideList = (
       <div className={classes.list} >
         <List>
-          {[<a href="#navIntro">Intro</a>, 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {[<a href="#navIntro">Intro</a>, <a href="#howToPlay">How to Play</a>, 'Send email', 'Drafts'].map((text, index) => (
             <ListItem button key={text}>
               {/*<ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>*/}
               <ListItemText primary={text} />
